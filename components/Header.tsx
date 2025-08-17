@@ -21,6 +21,7 @@ export default function Header() {
     { name: "About", href: "/about" },
     { name: "Projects", href: "/project" },
     { name: "Contact", href: "/contact" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const toggleTheme = () => {
