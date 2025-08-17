@@ -30,10 +30,11 @@ export default function Header() {
 
   return (
     <>
-      {/* Desktop Header (Top) */}
-      <header className="hidden md:block fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50">
-        <div className="flex items-center justify-between px-8 py-4 rounded-2xl shadow-lg 
-        backdrop-blur-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/50 dark:border-zinc-800/50">
+      {/* Desktop Header (Top Glassy Nav) */}
+      <header className="hidden md:block fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl z-50">
+        <div className="flex items-center justify-between px-10 py-4 rounded-2xl
+        backdrop-blur-2xl bg-white/40 dark:bg-zinc-900/40 border border-white/20 dark:border-white/10 
+        shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
           
           {/* Logo */}
           <Link
@@ -44,7 +45,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="flex space-x-8 text-base font-medium">
+          <nav className="flex space-x-10 text-base font-medium">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
               return (
@@ -82,7 +83,8 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               className="flex items-center justify-center w-10 h-10 rounded-full 
-              bg-zinc-200 dark:bg-zinc-800 hover:scale-110 transition-transform"
+              bg-white/40 dark:bg-zinc-800/40 border border-white/20 dark:border-white/10 
+              hover:scale-110 transition-transform backdrop-blur-md shadow-md"
             >
               <AnimatePresence mode="wait" initial={false}>
                 {theme === "light" ? (
@@ -112,10 +114,11 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile Bottom Nav */}
-      <nav className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] max-w-lg 
-      z-50 flex justify-around items-center py-3 rounded-2xl shadow-lg backdrop-blur-xl 
-      bg-white/80 dark:bg-zinc-900/80 border border-zinc-200/50 dark:border-zinc-800/50">
+      {/* Mobile Bottom Nav (Glassy Dock) */}
+      <nav className="md:hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-[94%] max-w-lg 
+      z-50 flex justify-around items-center py-3 rounded-2xl 
+      backdrop-blur-2xl bg-white/40 dark:bg-zinc-900/40 border border-white/20 dark:border-white/10 
+      shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
         {navLinks.map((link, index) => {
           const isActive = pathname === link.href;
           return (
@@ -137,8 +140,9 @@ export default function Header() {
         {mounted && (
           <button
             onClick={toggleTheme}
-            className="flex items-center justify-center w-8 h-8 rounded-full 
-            bg-zinc-200 dark:bg-zinc-800 hover:scale-110 transition-transform"
+            className="flex items-center justify-center w-9 h-9 rounded-full 
+            bg-white/40 dark:bg-zinc-800/40 border border-white/20 dark:border-white/10 
+            hover:scale-110 transition-transform backdrop-blur-md shadow-md"
           >
             {theme === "light" ? (
               <Sun className="w-4 h-4 text-yellow-500" />
