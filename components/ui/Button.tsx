@@ -1,53 +1,54 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
+  variant?: "default" | "outline" | "ghost" | "gradient" | "glass";
+  size?: "sm" | "md" | "lg" | "xl";
+  children: React.ReactNode;
+  className?: string;
 }
 
-const ModernButton: React.FC<ButtonProps> = ({
-  children,
-  className = "",
-  variant = "default",
-  size = "md",
-  ...props
-}) => {
-  let variantClasses = "";
-  let sizeClasses = "";
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = "default", size = "md", className, children, ...props }, ref) => {
+    const baseClasses = "inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900";
+    
+    const variants = {
+      default: "bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 shadow-lg hover:shadow-xl",
+      outline: "border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 dark:hover:border-slate-500",
+      ghost: "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white",
+      gradient: "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl hover:scale-105",
+      glass: "glass hover:glass-strong text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white",
+    };
 
-  // Variants
-  if (variant === "default") {
-    variantClasses =
-      "bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 shadow-lg hover:shadow-xl";
-  } else if (variant === "outline") {
-    variantClasses =
-      "border border-zinc-300 dark:border-zinc-700 bg-transparent text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800";
-  } else if (variant === "ghost") {
-    variantClasses =
-      "bg-transparent text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800";
+    const sizes = {
+      sm: "px-4 py-2 text-sm rounded-lg",
+      md: "px-6 py-3 text-base rounded-xl",
+      lg: "px-8 py-4 text-lg rounded-2xl",
+      xl: "px-10 py-5 text-xl rounded-3xl",
+    };
+
+    return (
+      <motion.button
+        ref={ref}
+        className={cn(
+          baseClasses,
+          variants[variant],
+          sizes[size],
+          className
+        )}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        {...props}
+      >
+        {children}
+      </motion.button>
+    );
   }
+);
 
-  // Sizes
-  if (size === "sm") {
-    sizeClasses = "px-3 py-1 text-sm";
-  } else if (size === "md") {
-    sizeClasses = "px-5 py-2 text-base";
-  } else if (size === "lg") {
-    sizeClasses = "px-7 py-3 text-lg";
-  }
+Button.displayName = "Button";
 
-  return (
-    <button
-      className={`inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 transform hover:scale-105 
-        focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:opacity-50 disabled:cursor-not-allowed 
-        ${variantClasses} ${sizeClasses} ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
-
-export default ModernButton;
+export default Button;
