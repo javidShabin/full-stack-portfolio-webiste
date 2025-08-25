@@ -8,45 +8,50 @@ export default function AboutPage() {
     {
       icon: Code,
       title: "Full Stack Development",
-      description: "Building complete web applications from frontend to backend with modern technologies."
+      description:
+        "Building complete web applications from frontend to backend with modern technologies.",
     },
     {
       icon: Globe,
       title: "Web Technologies",
-      description: "Expert in React, Node.js, MongoDB, and other cutting-edge web technologies."
+      description:
+        "Expert in React, Node.js, MongoDB, and other cutting-edge web technologies.",
     },
     {
       icon: Lightbulb,
       title: "Problem Solving",
-      description: "Creative approach to complex technical challenges with innovative solutions."
+      description:
+        "Creative approach to complex technical challenges with innovative solutions.",
     },
     {
       icon: Users,
       title: "Team Collaboration",
-      description: "Excellent communication skills and experience working in agile development teams."
+      description:
+        "Excellent communication skills and experience working in agile development teams.",
     },
     {
       icon: Award,
       title: "Continuous Learning",
-      description: "Self-taught developer committed to staying updated with latest industry trends."
+      description:
+        "Self-taught developer committed to staying updated with latest industry trends.",
     },
     {
       icon: Zap,
       title: "Fast Delivery",
-      description: "Efficient development process ensuring timely project completion."
-    }
+      description:
+        "Efficient development process ensuring timely project completion.",
+    },
   ];
 
   const stats = [
     { number: "3+", label: "Years Experience" },
     { number: "50+", label: "Projects Built" },
     { number: "15+", label: "Technologies" },
-    { number: "100%", label: "Client Satisfaction" }
+    { number: "100%", label: "Client Satisfaction" },
   ];
 
   return (
     <section className="relative py-24 px-6 md:px-12">
-      
       {/* Subtle Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800" />
@@ -72,16 +77,21 @@ export default function AboutPage() {
               About Me
             </span>
           </motion.div>
-          
+
           <h2 className="heading-lg mb-6">
-            Crafting Digital{" "}
-            <span className="gradient-text">Experiences</span>
+            Crafting Digital <span className="gradient-text">Experiences</span>
           </h2>
-          
+
           <p className="body-lg max-w-3xl mx-auto">
-            I'm <span className="font-semibold text-slate-900 dark:text-white">Javid Shabin</span>, a passionate{" "}
-            <span className="font-semibold">Full Stack Developer</span> with a unique journey from non-IT background to 
-            becoming a skilled web developer. My passion for technology drives me to create exceptional digital solutions.
+            I&apos;m{" "}
+            <span className="font-semibold text-slate-900 dark:text-white">
+              Javid Shabin
+            </span>
+            , a passionate{" "}
+            <span className="font-semibold">Full Stack Developer</span> with a
+            unique journey from non-IT background to becoming a skilled web
+            developer. My passion for technology drives me to create exceptional
+            digital solutions.
           </p>
         </motion.div>
 
@@ -97,25 +107,35 @@ export default function AboutPage() {
             <h3 className="heading-md mb-6 text-left">
               My <span className="gradient-text">Journey</span>
             </h3>
-            
+
             <div className="space-y-6 text-left">
               <p className="body-md">
-                Coming from a non-IT background, I've proven myself as a{" "}
-                <span className="font-semibold text-slate-900 dark:text-white">self-taught, highly motivated developer</span>{" "}
+                Coming from a non-IT background, I&apos;ve proven myself as a{" "}
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  self-taught, highly motivated developer
+                </span>{" "}
                 dedicated to mastering modern web development.
               </p>
-              
+
               <p className="body-md">
                 I love turning complex ideas into{" "}
-                <span className="font-semibold">scalable, user-friendly applications</span> while constantly pushing myself 
-                to grow, adapt, and explore new technologies.
+                <span className="font-semibold">
+                  scalable, user-friendly applications
+                </span>{" "}
+                while constantly pushing myself to grow, adapt, and explore new
+                technologies.
               </p>
-              
+
               <p className="body-md">
                 My approach combines{" "}
-                <span className="font-semibold text-blue-600 dark:text-blue-400">technical expertise</span> with{" "}
-                <span className="font-semibold text-slate-900 dark:text-white">creative problem-solving</span>, 
-                ensuring every project exceeds expectations.
+                <span className="font-semibold text-blue-600 dark:text-blue-400">
+                  technical expertise
+                </span>{" "}
+                with{" "}
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  creative problem-solving
+                </span>
+                , ensuring every project exceeds expectations.
               </p>
             </div>
 
@@ -155,12 +175,15 @@ export default function AboutPage() {
                 <div className="w-32 h-32 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
                   <Code className="w-16 h-16 text-white" />
                 </div>
-                <h4 className="text-xl font-semibold mb-3 text-slate-900 dark:text-white">Full Stack Developer</h4>
+                <h4 className="text-xl font-semibold mb-3 text-slate-900 dark:text-white">
+                  Full Stack Developer
+                </h4>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Specializing in modern web technologies and creating seamless user experiences
+                  Specializing in modern web technologies and creating seamless
+                  user experiences
                 </p>
               </div>
-              
+
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
@@ -169,7 +192,7 @@ export default function AboutPage() {
               >
                 <Globe className="w-10 h-10 text-blue-500" />
               </motion.div>
-              
+
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 4, delay: 1 }}
@@ -191,7 +214,7 @@ export default function AboutPage() {
           <h3 className="heading-md text-center mb-12">
             What I <span className="gradient-text">Bring</span>
           </h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {highlights.map((highlight, index) => (
               <motion.div
