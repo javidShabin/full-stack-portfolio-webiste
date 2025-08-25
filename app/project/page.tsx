@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaUsers } from "react-icons/fa";
-import { SiVercel, SiNetlify } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt} from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
 
