@@ -45,7 +45,7 @@ export default function Hero() {
         Hi, I’m Javid Shabin
       </span>
       <h1 className="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-gray-300">
-        Full Stack <span className="text-purple-500">MERN Developer</span>
+        Full Stack <span className="text-purple-500"> Developer</span>
       </h1>
       <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
         I build simple, fast, and modern web applications.
