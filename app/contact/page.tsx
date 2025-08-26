@@ -102,12 +102,12 @@ export default function ContactPage() {
           </motion.div>
           
           <h2 className="heading-lg mb-6">
-            Let's Start a <span className="gradient-text">Conversation</span>
+            Let&apos;s Start a <span className="gradient-text">Conversation</span>
           </h2>
           
           <p className="body-lg max-w-3xl mx-auto">
-            Ready to bring your ideas to life? I'm always excited to discuss new projects, 
-            opportunities, or just chat about technology. Let's connect!
+            Ready to bring your ideas to life? I&apos;m always excited to discuss new projects, 
+            opportunities, or just chat about technology. Let&apos;s connect!
           </p>
         </motion.div>
 
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 rounded-xl glass border border-slate-200 dark:border-slate-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
-                    placeholder="What's this about?"
+                    placeholder="What&apos;s this about?"
                   />
                 </div>
                 
@@ -298,11 +298,11 @@ export default function ContactPage() {
             {/* Additional Info */}
             <div className="glass-strong rounded-2xl p-6">
               <h4 className="font-semibold text-slate-900 dark:text-white mb-3">
-                💡 What's Next?
+                💡 What&apos;s Next?
               </h4>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                 I typically respond within 24 hours. Whether you have a project in mind, 
-                want to discuss opportunities, or just want to say hello, I'd love to hear from you!
+                want to discuss opportunities, or just want to say hello, I&apos;d love to hear from you!
               </p>
             </div>
           </motion.div>

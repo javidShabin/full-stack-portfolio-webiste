@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import {
   SiNextdotjs, SiMongodb, SiTailwindcss,
-  SiGithub, SiExpress, SiTypescript, SiPostgresql,
+  SiExpress, SiTypescript, SiPostgresql,
   SiRedux, SiJest, SiWebpack, SiVercel, SiNetlify
 } from "react-icons/si";
 
@@ -191,8 +191,8 @@ export default function SkillsPage() {
               Always <span className="gradient-text">Learning</span>
             </h3>
             <p className="body-md text-slate-600 dark:text-slate-400 mb-6">
-              Technology evolves rapidly, and I'm committed to staying at the forefront. 
-              I'm currently exploring new frameworks, tools, and methodologies to enhance my skillset.
+              Technology evolves rapidly, and I&apos;m committed to staying at the forefront. 
+              I&apos;m currently exploring new frameworks, tools, and methodologies to enhance my skillset.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {["GraphQL", "AWS", "Kubernetes", "Machine Learning", "Web3"].map((tech, index) => (

@@ -274,10 +274,10 @@ export default function ProjectsPage() {
         >
           <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-4xl mx-auto border border-slate-200 dark:border-slate-700 shadow-lg">
             <h3 className="heading-md mb-4">
-              Let's Build Something <span className="gradient-text">Amazing</span>
+              Let&apos;s Build Something <span className="gradient-text">Amazing</span>
             </h3>
             <p className="body-md text-slate-600 dark:text-slate-400 mb-6">
-              Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
+              Have a project in mind? I&apos;d love to hear about it and discuss how we can bring your ideas to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

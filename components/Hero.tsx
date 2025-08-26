@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="heading-xl mb-6"
         >
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <span className="gradient-text">Javid Shabin</span>
         </motion.h1>
 
